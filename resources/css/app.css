@@ -1,0 +1,26 @@
+ /* ↓検索エリア */
+ .search-area{
+    text-align: left;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px;
+}
+ /* ↓ログイン機能 */
+.py-4{
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 100%;
+}
+/* テーブルを包むコンテナのスタイル */
+.tr th {
+    max-height: 300px; /* 表示する高さを調整 */
+    overflow-y: auto;  /* Y軸方向にスクロール可能にする */
+    }
+.tr {
+    text-align: center;
+}
+
+/* ///////上記ログきいてない */
