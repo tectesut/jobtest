@@ -130,7 +130,7 @@
 {{-- ページネーション --}}
         @if ($items->hasPages())
             <div class="card-footer clearfix">
-                {{ $items->links() }}
+                {{ $items->links('pagination::bootstrap-5') }}
             </div>
         @endif
 

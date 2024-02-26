@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         if(\App::environment(['production'])){
-            \url::forceScheme('https');
+            \URL::forceScheme('https');
         }
     }
 }
