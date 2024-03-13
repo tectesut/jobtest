@@ -298,6 +298,12 @@ return [
             'icon' => 'fa fa-vector-square',
         ],
 
+        [
+            'text' => 'カレンダー',
+            'url'  => 'calendar',
+            'icon' => 'fa fa-vector-square',
+        ],
+
         // AdminLTEデフォルト
         /*
         // Navbar items:

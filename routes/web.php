@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ExportController;
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +21,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+// トップページ
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// カレンダーページ
+Route::get('calendar', function () {return view('calendar');})->name('calendar');
 
 Route::prefix('items')->group(function () {
     Route::get('/', [App\Http\Controllers\ItemController::class, 'index']);
@@ -36,5 +42,8 @@ Route::prefix('items')->group(function () {
 
     // 更新 update
     Route::put('/item/{item}', [App\Http\Controllers\ItemController::class, 'update'])->name('item.update');
+
+      // エクセルエクスポート
+    Route::get('/export', [App\Http\Controllers\ExportController::class, 'export']);
 });
 

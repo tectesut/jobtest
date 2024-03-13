@@ -13,6 +13,8 @@
 
     <br>
     <sidebar> 
+    <!-- エクセルにエクスポート -->								
+    <button type="button" class="btn btn-success" onclick="exportToExcel()">エクセルにエクスポート</button>								
 
     <!-- 印刷ボタン -->
     <button type="button" class="btn btn-info" onclick="printTable()">印刷</button>
@@ -97,6 +99,7 @@
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>								
 
 <script>
     // ↓印刷用
@@ -104,28 +107,18 @@
     window.print();
     }
 </script>
-<script>
-    function updateLikedStatus(checkbox) {
-        var itemId = checkbox.value;
-        var isLiked = checkbox.checked;
 
-        // Ajaxを使ってサーバーにデータを送信し、データベースを更新
-        $.ajax({
-            type: 'POST',
-            url: '{{ url("/items/update-like-status") }}',
-            data: {
-                itemId: itemId,
-                isLiked: isLiked,
-                _token: '{{ csrf_token() }}'
-            },
-            success: function(response) {
-                console.log(response);
-            },
-            error: function(error) {
-                console.error(error);
-            }
-        });
-    }
+<script>
+    // ↓エクセルエクスポート
+function exportToExcel() {				
+    var table = document.getElementById("excelTable");				
+    var data = XLSX.utils.table_to_sheet(table);				
+    var wb = XLSX.utils.book_new();				
+    XLSX.utils.book_append_sheet(wb, data, "Sheet1");				
+    XLSX.writeFile(wb, 'exported_data.xlsx');				
+    }				
+				
+
 </script>
 {{-- ページネーション --}}
         @if ($items->hasPages())
@@ -141,6 +134,8 @@
 @stop
 
 @section('js')
+<!-- SheetJS Library -->	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>	
 
 @stop
 
