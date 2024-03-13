@@ -71,6 +71,7 @@ class ItemController extends Controller
             'type' => $request->type,
             'detail' => $request->detail,
             'image_path' => null,
+            'options' => $request->options, // オプションデータを保存
         ]);
 
         // 画像の更新処理

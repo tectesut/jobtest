@@ -56,6 +56,7 @@
                             <th>ID</th>
                             <th>商品名</th>
                             <th>画像</th> <!-- 追加 -->
+                            <th>オプション</th>
                             <th>カテゴリ</th>
                             <th>詳細</th>
                             <th>操作</th> <!-- 追加 -->
@@ -73,6 +74,8 @@
                                     画像なし
                                 @endif
                             </td>
+
+                            <td>{{ $item->options }}</td>
 
                             <td>{{ $item->type }}</td>
                             <td>{{ $item->detail }}</td>

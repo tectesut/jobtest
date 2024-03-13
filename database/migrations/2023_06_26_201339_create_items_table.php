@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('type', 100)->nullable();
             $table->string('detail', 500)->nullable();
             $table->string('image_path')->nullable(); // 画像のファイルパスを保存するカラムを追加
+            $table->string('options')->nullable(); // オプションセレクトボックス
             $table->timestamps();
         });
     }

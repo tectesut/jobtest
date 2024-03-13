@@ -34,6 +34,15 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="options">オプション</label>
+                            <select class="form-control" id="options" name="options" multiple>
+                                <!-- オプションの選択肢を動的に生成する場合、適切な方法でデータを取得してループ処理する -->
+                                <option value="option1">Option 1</option>
+                                <option value="option2">Option 2</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
                             <label for="type">カテゴリ</label>
                             <input type="text" class="form-control" id="type" name="type" placeholder="カテゴリ">
                         </div>

@@ -18,6 +18,7 @@ class Item extends Model
         'image_path', // 画像ファイルのパスを保存するためのカラム
         'type',
         'detail',
+        'options',
     ];
 
     /**
