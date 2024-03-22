@@ -55,7 +55,7 @@
                         <tr class="table table-primary text-center">
                             <th>ID</th>
                             <th>商品名</th>
-                            <th>画像</th> <!-- 追加 -->
+                            <th>商品画像</th> <!-- 追加 -->
                             <th>オプション</th>
                             <th>カテゴリ</th>
                             <th>詳細</th>
