@@ -21,7 +21,7 @@
 * Laravel 10
 　 
 ## ・設計書
-［設計者ページへ］（https://docs.googLe.com/spreadsheets~wwwww）
+［設計者ページへ］（https://drive.google.com/drive/folders/1CkphiVRHHy8i2wt7Dtk_tdNIMbun_idh?usp=drive_link）
 　
 ## ・システム関覧
 ［アプリケーションページへ］（https://app-ja-42ab07f3ff60.herokuapp.com/login）
